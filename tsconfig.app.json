@@ -5,6 +5,9 @@
   "compilerOptions": {
     "types": []
   },
+  "files": [
+    "main.single-spa.ts"
+  ],
   "include": [
     "src/**/*.ts"
   ],

@@ -4,13 +4,14 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 ## Development server
 
-To start a local development server, run:
+Start the microfrontend development server with:
 
 ```bash
-ng serve
+npm start
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+The single-spa entry is served at `http://localhost:4500/main.js` with CORS enabled.
+Start `spa-root` with `npm start` and open `http://localhost:9000/mfe2` to mount the application. Changes are rebuilt automatically.
 
 ## Code scaffolding
 
@@ -31,10 +32,10 @@ ng generate --help
 To build the project run:
 
 ```bash
-ng build
+npm run build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+This stores the production build in `dist/mfe2-angular/browser/`. The entry remains named `main.js` for the root import map; update the map to the deployed URL when hosting it outside local development.
 
 ## Running unit tests
 
